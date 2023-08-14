@@ -1,0 +1,70 @@
+package com.student.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.dto.StudentDto;
+import com.student.exception.CourseNotfoundException;
+import com.student.exception.StudentNotfoundException;
+import com.student.model.Student;
+import com.student.repository.StudentRepository;
+import com.student.utility.StudentUtility;
+
+@Service
+public class StudentService {
+	
+	@Autowired
+	StudentRepository studentRepository;
+	
+	@Autowired
+	StudentUtility studentUtility;
+
+	public StudentDto registerStudent(StudentDto studentDto) {		
+		Student student=studentUtility.convertDtoToEntity(studentDto);		
+		studentRepository.save(student);
+		return studentUtility.convertEntityToDto(student);
+	}
+
+	public void deleteStudent(Long studentId) {
+		Optional<Student> student = studentRepository.findById(studentId);
+		if(!student.isPresent()) {
+			throw  new StudentNotfoundException();
+		}
+		else {
+			studentRepository.deleteById(studentId);
+		}	
+	}
+
+
+	public List<StudentDto> getAllStudent(Long courseId) {
+		List<Student> studentList = studentRepository.findByIdCourseId(courseId);
+		if(!studentList.isEmpty()) {
+			throw new CourseNotfoundException();
+		}
+		else {
+			List<StudentDto> studentDtoList=new ArrayList<>();
+			for(Student student:studentList) {
+				StudentDto studentDto=studentUtility.convertEntityToDto(student);
+				studentDtoList.add(studentDto);				
+			}
+			return studentDtoList;
+		}
+	}
+
+	public StudentDto allocateCourseToStudent(List<Long> courseId, Long studentId) {
+		Optional<Student> student = studentRepository.findById(studentId);
+		if(!student.isPresent()) {
+			throw  new StudentNotfoundException();
+		}
+		else {
+			student.get().set;
+			studentRepository.save(student.get());
+		}
+		return studentUtility.convertEntityToDto(student.get());
+	}
+
+}

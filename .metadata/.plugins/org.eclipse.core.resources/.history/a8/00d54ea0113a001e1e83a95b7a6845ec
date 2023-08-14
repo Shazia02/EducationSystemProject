@@ -1,0 +1,5 @@
+package com.student.jwt;
+
+public class UserPrincipal {
+
+}

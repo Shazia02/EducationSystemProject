@@ -1,0 +1,38 @@
+package com.student.dto;
+
+
+public class StudentDto {
+	
+	private String studentName;
+	private String emailAddress;
+	private Long telephoneNumber;
+	private String address;
+	
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+	public Long getTelephoneNumber() {
+		return telephoneNumber;
+	}
+	public void setTelephoneNumber(Long telephoneNumber) {
+		this.telephoneNumber = telephoneNumber;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+
+	
+}

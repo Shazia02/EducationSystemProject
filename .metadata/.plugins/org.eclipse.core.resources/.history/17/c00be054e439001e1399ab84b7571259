@@ -1,0 +1,26 @@
+package com.education.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.education.model.Course;
+import com.education.repository.CourseRepository;
+
+@RestController
+public class CourseController {
+	
+	private final CourseRepository repository;
+
+	CourseController(CourseRepository repository) {
+	    this.repository = repository;
+	  }
+	
+	 @GetMapping("/employees")
+	  List<Course> allCourses() {
+	    return repository.findAll();
+	  }
+
+
+}

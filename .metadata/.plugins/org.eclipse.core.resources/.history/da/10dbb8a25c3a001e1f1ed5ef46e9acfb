@@ -1,0 +1,12 @@
+package com.student.config;
+
+@Configuration
+public class OpenApiConfig {
+    @Bean
+    public OpenAPI usersMicroserviceOpenAPI() {
+        return new OpenAPI()
+                .info(new Info().title("Student API")
+                                 .description("Student API")
+                                 .version("1.0"));
+    }
+}

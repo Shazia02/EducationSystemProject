@@ -1,0 +1,34 @@
+
+“
+java:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(õôˆêşÿÿÿÿ8¾ğ½ú1HPRMAJORZ
+CODE_SMELL
+x
+java:S3457"AFormat specifiers should be used instead of string concatenation.(õôˆêşÿÿÿÿ8¾ğ½ú1HRRMAJORZ
+CODE_SMELL
+
+java:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(ëóÙ8¾ğ½ú1HORMAJORZ
+CODE_SMELL
+r
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ëóÙ8¾ğ½ú1HQRMAJORZ
+CODE_SMELL
+
+java:S1192"LDefine a constant instead of duplicating this literal "Preloading " 5 times.(ëóÙ8éèãú1H‚RCRITICALZ
+CODE_SMELL
+”
+java:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(Ïı¬‚ÿÿÿÿÿ8éèãú1HˆRMAJORZ
+CODE_SMELL
+
+java:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(®¤¿8éèãú1H‰RMAJORZ
+CODE_SMELL
+
+java:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(¶ä8éèãú1HŠRMAJORZ
+CODE_SMELL
+y
+java:S3457"AFormat specifiers should be used instead of string concatenation.(Ïı¬‚ÿÿÿÿÿ8éèãú1H‹RMAJORZ
+CODE_SMELL
+t
+java:S3457"AFormat specifiers should be used instead of string concatenation.(®¤¿8éèãú1HŒRMAJORZ
+CODE_SMELL
+t
+java:S3457"AFormat specifiers should be used instead of string concatenation.(¶ä8éèãú1HRMAJORZ
+CODE_SMELL

@@ -1,0 +1,15 @@
+
+_
+java:S1481 ",Remove this unused "student" local variable.(Á¶ÑÒ8¼’ø‚Ÿ1HüRMINORZ
+CODE_SMELL
+n
+java:S1854 ";Remove this useless assignment to local variable "student".(Á¶ÑÒ8¼’ø‚Ÿ1HûRMAJORZ
+CODE_SMELL
+”
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "studentto".(ŸÚ±8ÛÛ¢ı1HíRMINORZ
+CODE_SMELL
+m	java:S125!"<This block of commented-out lines of code should be removed.(æåÖl8ÎÀÏ…Ÿ1H¯RMAJORZ
+CODE_SMELL
+~
+java:S1128	"KRemove this unused import 'com.student.exception.StudentNotFountException'.(á™Ø›8ÎÀÏ…Ÿ1H°RMINORZ
+CODE_SMELL

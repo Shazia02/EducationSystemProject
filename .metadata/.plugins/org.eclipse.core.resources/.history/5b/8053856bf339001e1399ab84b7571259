@@ -1,0 +1,24 @@
+package com.student.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.student.dto.StudentDto;
+import com.student.model.Student;
+import com.student.repository.StudentRepository;
+import com.student.utility.StudentUtility;
+
+public class StudentService {
+	
+	@Autowired
+	StudentRepository studentRepository;
+	
+	@Autowired
+	StudentUtility studentUtility;
+
+	public Student registerStudent(StudentDto studentDto) {
+		
+		studentUtility.convertEntityToDto(studentDto);		
+		studentRepository.save(null);
+	}
+
+}

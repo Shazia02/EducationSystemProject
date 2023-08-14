@@ -1,0 +1,6 @@
+package com.student.jwt;
+
+public class MessageResponse {
+
+	private String message;
+}

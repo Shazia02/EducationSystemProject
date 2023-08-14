@@ -1,0 +1,88 @@
+package com.student.controller;
+
+import java.util.List;
+
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.student.dto.CourseDto;
+import com.student.dto.StudentDto;
+import com.student.model.Course;
+import com.student.service.StudentService;
+
+import jakarta.servlet.http.HttpServletRequest;
+
+
+
+@RestController
+@Validated
+public class StudentController {
+	
+	@Autowired
+	StudentService studentService;
+	
+	 @PostMapping("/students")
+	 @PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity<StudentDto> registerStudent(HttpServletRequest request,@RequestBody StudentDto student) {
+		StudentDto studentDto= studentService.registerStudent(student);
+		return ResponseEntity.ok().body(studentDto);	
+
+	  }
+	 
+	 @GetMapping(value="/student/courses")
+	 public ResponseEntity<String> getCourses(HttpServletRequest request){
+		 String url="http://localhost:8080/courses";
+		 RestTemplate  restTemplate=new RestTemplate();		 
+		 ResponseEntity<Course[]> response =
+				  restTemplate.getForEntity(url,
+				  Course[].class);
+		 Course[] courses = response.getBody();
+		 JSONObject json = new JSONObject();
+		 json.put("result", courses);
+		 return ResponseEntity.ok().body(json.toString());
+		 
+	 }
+	 @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	 @DeleteMapping("/student/{studentId}")
+	 public ResponseEntity<String> deleteEmployee(HttpServletRequest request,@PathVariable Long studentId) {
+		 studentService.deleteStudent(studentId);
+		 return ResponseEntity.ok().body("Student deleted with success!");		 
+	   
+	  }
+	 @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+	 @GetMapping("/student/{courseId}")
+	 public ResponseEntity<String> getAllSudents(HttpServletRequest request,@PathVariable Long courseId) {
+		 List<StudentDto> studentDtoList= studentService.getAllStudent(courseId);
+		 JSONObject json = new JSONObject();
+		 json.put("result", studentDtoList);		 
+		 return ResponseEntity.ok().body(json.toString());
+	  }
+
+	 @PostMapping("/students/allocateCourse")
+	 @PreAuthorize("hasRole('ADMIN')")
+	 public ResponseEntity<StudentDto> allocateCourse(HttpServletRequest request, @RequestParam("courseId") Long courseId,@RequestParam("studentId") Long studentId) {
+		StudentDto studentDto= studentService.allocateCourseToStudent(courseId,studentId);
+		return ResponseEntity.ok().body(studentDto);	
+
+	  }
+	 
+	 @PutMapping("/students/updateCourse")
+	 @PreAuthorize("hasRole('ADMIN')")
+	 public ResponseEntity<StudentDto> updateCourse(HttpServletRequest request, @RequestParam("courseId") List<CourseDto> courseIdList,@RequestParam("studentId") Long studentId) {
+		StudentDto studentDto= studentService.updateCourseToStudent(courseIdList,studentId);
+		return ResponseEntity.ok().body(studentDto);	
+
+	  }
+}

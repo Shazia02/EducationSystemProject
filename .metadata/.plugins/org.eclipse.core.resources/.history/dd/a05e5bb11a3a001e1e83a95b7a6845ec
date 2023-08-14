@@ -1,0 +1,7 @@
+package com.student.jwt;
+
+public class LoginRequest {
+
+	String userName;
+	String password
+}

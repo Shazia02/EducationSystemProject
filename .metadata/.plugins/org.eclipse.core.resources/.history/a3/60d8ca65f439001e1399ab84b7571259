@@ -1,0 +1,9 @@
+package com.student.dto;
+
+public class CourseDto {
+	
+	  private  Long id;
+	  private String courseName;
+	  private int courseDuration;
+
+}

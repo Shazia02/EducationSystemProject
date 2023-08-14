@@ -1,0 +1,14 @@
+
+˜
+java:S3305"]Inject this field value directly into "authenticationProvider", the only method that uses it.(ñÊ®¤ùÿÿÿÿ8œêÝ„Ÿ1H„RCRITICALZ
+CODE_SMELL
+ˆ
+java:S3305"RInject this field value directly into "filterChain", the only method that uses it.(†€Ú³8ìÍá„Ÿ1H†RCRITICALZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(žì–Ùúÿÿÿÿ8ßñº„Ÿ1H‡	RMAJORZ
+CODE_SMELL
+m	java:S125C"<This block of commented-out lines of code should be removed.(êï¿_8ÍØã„Ÿ1H‰RMAJORZ
+CODE_SMELL
+¤
+java:S1128"qRemove this unused import 'org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter'.(÷ìïŠ8ÍØã„Ÿ1HŠRMINORZ
+CODE_SMELL

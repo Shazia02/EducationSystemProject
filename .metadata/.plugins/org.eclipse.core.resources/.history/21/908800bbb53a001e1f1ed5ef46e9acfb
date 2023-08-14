@@ -1,0 +1,22 @@
+server.port=8091
+
+
+#spring.profiles.active=dev
+#spring.application.name=studentApp
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+bezkoder.app.jwtSecret= ======================BezKoder=Spring===========================
+bezkoder.app.jwtExpirationMs=86400000
+
+# Specify the path of the OpenAPI documentation
+springdoc.api-docs.path=/api-docs
+# Specify the path of the Swagger UI
+springdoc.swagger-ui.path=/swagger-ui.html
+# Enable or disable Swagger UI
+springdoc.swagger-ui.enabled=true

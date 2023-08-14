@@ -1,0 +1,6 @@
+package com.student.exception;
+
+public class CourseNotfoundException extends RuntimeException {
+
+	
+}

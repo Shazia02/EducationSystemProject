@@ -1,0 +1,6 @@
+package com.student.jwt;
+
+public interface UserDetailsService {
+	UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+	}
+

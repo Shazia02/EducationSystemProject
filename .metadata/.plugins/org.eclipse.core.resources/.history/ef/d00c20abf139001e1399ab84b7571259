@@ -1,0 +1,20 @@
+package com.student.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.student.dto.StudentDto;
+
+
+
+@RestController
+public class StudentController {
+	
+	 @PostMapping("/students")
+	 StudentDto addCourse(@RequestBody StudentDto student) {
+	    return repository.save(newCourse);
+	  }
+
+
+}

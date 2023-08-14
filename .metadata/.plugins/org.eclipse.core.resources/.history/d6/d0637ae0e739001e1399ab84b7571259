@@ -1,0 +1,5 @@
+package com.education.exception;
+
+public class CourseNotFoundException {
+
+}

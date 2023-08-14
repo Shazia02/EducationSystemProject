@@ -1,0 +1,5 @@
+package com.education.model;
+
+public class Course {
+
+}

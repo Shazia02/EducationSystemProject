@@ -1,0 +1,37 @@
+package com.student.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.education.model.Course;
+import com.student.dto.StudentDto;
+import com.student.service.StudentService;
+
+
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	StudentService studentService;
+	
+	 @PostMapping("/students")
+	 public StudentDto addCourse(@RequestBody StudentDto student) {
+		return studentService.registerStudent(student);
+
+	  }
+	 
+	//get courses
+		 @GetMapping("/courses")
+		  List<com.student.model.Course> allCourses() {
+			// log.info("inside allCourses");
+		    return repository.findAll();
+		  }
+
+
+}

@@ -1,0 +1,26 @@
+
+Y
+java:S1068"'Remove this unused "jwt" private field.(²ÆL8ä—ö…Ÿ1HÔRMAJORZ
+CODE_SMELL
+a
+java:S1068")Remove this unused "roles" private field.(ÿÑšôøÿÿÿÿ8ÄØ…Ÿ1HâRMAJORZ
+CODE_SMELL
+g
+java:S3740"/Provide the parametrized type for this generic.(‹ì¤äıÿÿÿÿ8ÄØ…Ÿ1HÙRMAJORZ
+CODE_SMELL
+g
+java:S3740"/Provide the parametrized type for this generic.(ÿÑšôøÿÿÿÿ8½ÔØ…Ÿ1HÒRMAJORZ
+CODE_SMELL
+a
+java:S1068")Remove this unused "token" private field.(°É©ñÿÿÿÿÿ8ÄØ…Ÿ1HÚRMAJORZ
+CODE_SMELL
+_
+java:S1068
+",Remove this unused "username" private field.(‘ó¹²8ÄØ…Ÿ1HŞRMAJORZ
+CODE_SMELL
+d
+java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ8ÄØ…Ÿ1HàRMAJORZ
+CODE_SMELL
+`
+java:S1068	"(Remove this unused "type" private field.(ãˆôõÿÿÿÿÿ8ÄØ…Ÿ1HÜRMAJORZ
+CODE_SMELL
